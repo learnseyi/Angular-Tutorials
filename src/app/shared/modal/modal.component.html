@@ -1,0 +1,16 @@
+<div
+  [ngClass]="{
+    hideModal: !modal.isModalOpen(modalID),
+    showModal: modal.isModalOpen(modalID)
+  }"
+>
+  <div class="modal-content animate">
+    <span class="close" title="Close Modal" (click)="modal.toggleModal(modalID)"
+      >&times;</span
+    >
+    <ng-content select="[title]"></ng-content>
+    <ng-content select="[staffTitle]"></ng-content>
+
+    <ng-content></ng-content>
+  </div>
+</div>
