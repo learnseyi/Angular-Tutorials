@@ -20,13 +20,11 @@ export class ModalService {
     });
   }
   isModalOpen(id: string) {
-    console.log(this.modals.find((element) => element.id === id));
     return !!this.modals.find((element) => element.id === id)?.visible;
   }
 
   toggleModal(id: string) {
     const modal = this.modals.find((element) => element.id === id);
-    console.log('I am ', modal);
     if (modal) return (modal.visible = !modal.visible);
   }
 }

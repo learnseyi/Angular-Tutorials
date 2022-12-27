@@ -8,20 +8,20 @@
     <span class="close" title="Close Modal" (click)="modal.toggleModal(modalID)"
       >&times;</span
     >
+    
+    <ng-content></ng-content>
     <ng-content select="[title]"></ng-content>
-    <ng-content select="[staffTitle]"></ng-content>
-
-    <!-- <ng-content></ng-content> -->
+    
     <div class="container" style="background-color:#f1f1f1">
-    <button
-      type="button"
-      (click)="modal.toggleModal(modalID)"
-      class="cancelbtn"
-    >
-      Cancel
-    </button>
-    <span class="psw">Forgot <a href="#">password?</a></span>
+      <button
+        type="button"
+        (click)="modal.toggleModal(modalID)"
+        class="cancelbtn"
+      >
+        Cancel
+      </button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
   </div>
-  </div>
- 
 </div>
+

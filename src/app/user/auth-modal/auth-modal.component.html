@@ -1,9 +1,10 @@
-<app-modal>
+<app-modal [modalID]="modalID">
+  
   <form>
-    <app-tabs-container [modalID]="modalID">
+    <app-tabs-container>
       <app-tabs>
-        <div class="imgcontainer">
-          <h2 title>Login Form</h2>
+        <div class="imgcontainer"title>
+          <h2>Login Form</h2>
         </div>
         <div class="form-content">
           <label for="uname"><b>Username: </b></label>
