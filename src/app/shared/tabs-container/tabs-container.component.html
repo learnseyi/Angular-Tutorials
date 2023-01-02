@@ -1,8 +1,6 @@
 <!-- Tab links -->
-<div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'London')">London</button>
-  <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
-  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+<div class="tab" *ngFor="let tab of tabs" >
+  <button class="tablinks" (click)="switchTab(tab)">{{ tab.tabTitle }}</button>
 </div>
 
 <ng-content></ng-content>
