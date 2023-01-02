@@ -5,13 +5,14 @@
   }"
 >
   <div class="modal-content animate">
+    <h1 style="text-align: center; margin-top: 5px">Your Account</h1>
     <span class="close" title="Close Modal" (click)="modal.toggleModal(modalID)"
       >&times;</span
     >
-    
+
     <ng-content></ng-content>
     <ng-content select="[title]"></ng-content>
-    
+
     <div class="container" style="background-color:#f1f1f1">
       <button
         type="button"
@@ -24,4 +25,3 @@
     </div>
   </div>
 </div>
-

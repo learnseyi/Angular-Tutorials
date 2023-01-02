@@ -21,15 +21,16 @@ export class TabsContainerComponent implements AfterContentInit {
   constructor() {}
 
   switchTab(tab: TabsComponent) {
-    this.tabs.forEach((tab) => tab.active = false);
+    this.tabs.forEach((tab) => (tab.active = false));
     tab.active = true;
-    console.log(tab.tabTitle, tab.active);
   }
 
   ngOnInit() {}
 
-  ngAfterContentInit():void {
-    const activeTabs = this.tabs?.filter((tab) =>  tab.active);
-    !activeTabs || activeTabs.length === 0 ? this.switchTab(this.tabs.first) : ""
+  ngAfterContentInit(): void {
+    const activeTabs = this.tabs?.filter((tab) => tab.active);
+    !activeTabs || activeTabs.length === 0
+      ? this.switchTab(this.tabs.first)
+      : '';
   }
 }
