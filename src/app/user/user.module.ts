@@ -4,7 +4,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AuthModalComponent } from './auth-modal/auth-modal.component';
 import { StaffAuthComponent } from './staff-auth/staff-auth.component';
 import { SharedModule } from '../shared/shared.module';
-import { UserComponent } from './user/user.component';
+import { UsersComponent } from './users/users.component';
 import { StaffComponent } from './staff/staff.component';
 
 @NgModule({
@@ -12,13 +12,13 @@ import { StaffComponent } from './staff/staff.component';
   declarations: [
     AuthModalComponent,
     StaffAuthComponent,
-    UserComponent,
-    StaffComponent,
+    UsersComponent,
+    StaffComponent
   ],
   exports: [
     AuthModalComponent,
     StaffAuthComponent,
-    UserComponent,
+    UsersComponent,
     StaffComponent,
   ],
 })
