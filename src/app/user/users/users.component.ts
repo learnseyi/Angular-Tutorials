@@ -7,12 +7,14 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./users.component.css'],
 })
 export class UsersComponent {
+  name = new FormControl('', [Validators.required, Validators.minLength(4)]);
+  password = new FormControl('', [
+    Validators.required,
+    Validators.minLength(3),
+  ]);
   registerForm = new FormGroup({
-    name: new FormControl('', [Validators.required]),
-    password: new FormControl('', [
-      Validators.required,
-      Validators.minLength(3),
-    ]),
+    name: this.name,
+    password: this.password,
   });
   constructor() {}
 

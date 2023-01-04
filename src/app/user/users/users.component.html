@@ -1,4 +1,4 @@
-<form [FormGroup] = "registerForm">
+<form [formGroup]="registerForm">
   <div class="imgcontainer" title>
     <h2>Login Form</h2>
   </div>
@@ -8,16 +8,15 @@
       type="text"
       placeholder="Enter Username"
       name="uname"
-      required
-    /><br />
+      formControlName="name"
+    />
+    <p *ngIf="name.errors">This is a test</p>
+    <br />
 
     <label for="psw"><b>Password: </b></label>
-    <input
-      type="password"
-      placeholder="Enter Password"
-      name="psw"
-      required
-    /><br />
+    <input type="password" placeholder="Enter Password" name="psw" for />
+    <p>This is a test</p>
+    <br />
 
     <button class="loginbtn" type="submit">Login</button><br />
     <label>
