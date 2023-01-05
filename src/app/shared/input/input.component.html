@@ -1,11 +1,13 @@
 <input
-  type="text"
-  placeholder="Enter Username"
+  type="type "
+  placeholder="placeholder"
   name="uname"
   [formControl]="control"
 />
-<p *ngIf="control.errors.required">This is a test</p>
-<br />
+<ng-container *ngIf="control.touched && control.dirty">
+  <p *ngIf="control.errors.required">This is a test</p>
+  <br />
+</ng-container>
 
 <!-- <input type="password" placeholder="Enter Password" name="psw" for />
 <p>This is a test</p>

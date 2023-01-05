@@ -4,9 +4,13 @@
   </div>
   <div class="form-content">
     <label for="uname"><b>Username: </b></label>
-    <app-input [control]="name" ></app-input>
+    <app-input
+      [control]="name"
+      type="text"
+      placeholder="Enter Username"
+    ></app-input>
     <label for="psw"><b>Password: </b></label>
-    <app-input></app-input>
+    <app-input [control]="password"></app-input>
 
     <button class="loginbtn" type="submit">Login</button><br />
     <label>
