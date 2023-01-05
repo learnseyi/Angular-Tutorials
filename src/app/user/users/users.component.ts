@@ -16,7 +16,9 @@ export class UsersComponent {
     name: this.name,
     password: this.password,
   });
-  constructor() {}
+  constructor() {
+    console.log(this.registerForm.controls.name);
+  }
 
   ngOnInit() {}
 }
