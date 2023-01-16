@@ -1,9 +1,10 @@
+<ng-content></ng-content>
 <input
   type="type "
   placeholder="placeholder"
   name="uname"
   [formControl]="control"
-/>
+/><br />
 <ng-container *ngIf="control.touched && control.dirty">
   <p *ngIf="control.errors.required">This is a test</p>
   <br />

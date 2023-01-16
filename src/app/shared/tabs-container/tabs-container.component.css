@@ -11,7 +11,7 @@
 /* Style the buttons that are used to open the tab content */
 .tab button {
   background-color: inherit;
-  float: left;
+  float: inherit;
   border: none;
   outline: none;
   cursor: pointer;
