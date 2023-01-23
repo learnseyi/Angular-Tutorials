@@ -22,7 +22,7 @@
       placeholder="Enter Password"
     ></app-input>
 
-    <button class="loginbtn" (click)="logIn()">Login</button><br />
+    <button class="loginbtn" (click)="logIn()" [disabled]="!loginForm.valid">Login</button><br />
     <label>
       <input type="checkbox" checked="checked" name="remember" /> Remember me
     </label>

@@ -5,7 +5,10 @@
   [formControl]="control"
 /><br />
 <ng-container *ngIf="control.touched && control.dirty">
-  <p *ngIf="control.errors.required">This is a test</p>
+  <p class="error" *ngIf="control.errors?.required">This field is required</p>
+  <p class="error" *ngIf="control.errors?.minlength">
+    Minimum allowed characters is {{ control.errors?.minlength.requiredLength }}
+  </p>
   <br />
 </ng-container>
 

@@ -22,7 +22,7 @@ export class UsersComponent {
   });
 
   constructor(private modal: ModalService) {
-    console.log(this.loginForm.controls.name);
+    console.log(this.loginForm.controls.name.errors.minlength);
   }
 
   async logIn() {
