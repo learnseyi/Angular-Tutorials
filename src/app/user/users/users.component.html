@@ -16,7 +16,11 @@
       placeholder="Enter Username"
     ></app-input>
     <label for="psw"><b>Password: </b></label>
-    <app-input [control]="password"></app-input>
+    <app-input
+      [control]="password"
+      type="password"
+      placeholder="Enter Password"
+    ></app-input>
 
     <button class="loginbtn" (click)="logIn()">Login</button><br />
     <label>

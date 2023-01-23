@@ -1,8 +1,7 @@
 <ng-content></ng-content>
 <input
-  type="type "
-  placeholder="placeholder"
-  name="uname"
+  [type]="type"
+  [placeholder]="placeholder"
   [formControl]="control"
 /><br />
 <ng-container *ngIf="control.touched && control.dirty">
