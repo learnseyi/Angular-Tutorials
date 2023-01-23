@@ -5,22 +5,18 @@
     [display]="displayAlert"
   ></app-alert>
   <h2>SIGN UP</h2>
-  <div class="icon">
-    <i class="fas fa-user-circle"></i>
-  </div>
   <div class="formcontainer">
     <div class="container">
-      <label for="fname"><strong>First Name</strong></label>
-      <input type="text" placeholder="Enter First name" name="fname" [formControl]="firstName"/>
-      <p *ngIf="firstName.errors">this field is required</p>
-      <label for="lname"><strong>Last Name</strong></label>
-      <input type="text" placeholder="Enter Last Name" name="lname" />
+      <label for="fname"><strong>First Name</strong></label><br>
+      <app-input type="text" placeholder="Enter First name"  [control]="firstName"></app-input><br>
+      <label for="lname"><strong>Last Name</strong></label><br>
+      <app-input type="text" placeholder="Enter Last Name" [control]="lastName"></app-input>
       <label for="uname"><strong>Username</strong></label>
-      <input type="text" placeholder="Enter Username" name="uname" />
+      <app-input type="text" placeholder="Enter Username" [control]="userName"></app-input>
       <label for="mail"><strong>E-mail</strong></label>
-      <input type="text" placeholder="Enter E-mail" name="mail" />
+      <app-input type="text" placeholder="Enter E-mail" [control]="email" ></app-input>
       <label for="psw"><strong>Password</strong></label>
-      <input type="password" placeholder="Enter Password" name="psw" />
+      <app-input type="password" placeholder="Enter Password" [control]="password"></app-input>
     </div>
     <button (click)="register($event)"><strong>SIGN UP</strong></button>
     <div class="container" style="background-color: #eee">

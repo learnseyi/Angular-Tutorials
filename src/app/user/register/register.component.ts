@@ -33,17 +33,15 @@ export class RegisterComponent implements OnInit {
     lastName: this.lastName,
     userName: this.userName,
     email: this.email,
-    password: this.password
+    password: this.password,
   });
-
- 
 
   ngOnInit() {}
 
   async register(e) {
     e.preventDefault();
-    // destructure 
-    const {email,password} = this.registerForm.value
+    // destructure
+    const { email, password } = this.registerForm.value;
     this.displayAlert = !this.displayAlert;
     this.alertMessage = ' we are retriving your account';
     const logInBtn = document.querySelector('.loginbtn');
@@ -54,6 +52,6 @@ export class RegisterComponent implements OnInit {
     );
     await setTimeout(() => (this.alertMessage = 'successful'), 2000);
     await setTimeout(() => (this.displayAlert = false), 4000);
-    console.log(this.firstName.errors);
+   
   }
 }
