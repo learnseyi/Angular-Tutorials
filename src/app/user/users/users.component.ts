@@ -1,5 +1,6 @@
-import { Component, ElementRef } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ModalService } from '../../services/modal.service';
 
 @Component({
   selector: 'app-users',
@@ -7,9 +8,9 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./users.component.css'],
 })
 export class UsersComponent {
-  display = true;
+  display: boolean = false;
   message: string = 'I am test';
-  className: string = 'test';
+  className: string = 'success';
   name = new FormControl('', [Validators.required, Validators.minLength(4)]);
   password = new FormControl('', [
     Validators.required,
@@ -19,8 +20,17 @@ export class UsersComponent {
     name: this.name,
     password: this.password,
   });
-  constructor() {
+
+  constructor(private modal: ModalService) {
     console.log(this.registerForm.controls.name);
+  }
+
+  async logIn() {
+    this.display = !this.display;
+    this.message = ' we are retriving your account';
+    const logInBtn = document.querySelector('.loginbtn');
+    await setTimeout(() => (this.message = 'successful'), 2000);
+    await setTimeout(() => (this.display = false), 4000);
   }
 
   ngOnInit() {}

@@ -1,7 +1,17 @@
 /* The alert message box */
-.test {
+.error {
   padding: 15px;
   background-color: #f44336; /* Red */
+  color: white;
+  cursor: pointer;
+  margin-bottom: 15px;
+  margin: auto;
+  width: fit-content;
+}
+
+.success {
+  padding: 15px;
+  background-color: green; /* green */
   color: white;
   cursor: pointer;
   margin-bottom: 15px;

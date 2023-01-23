@@ -16,7 +16,7 @@ export class ModalService {
   register(id: string) {
     this.modals.push({
       id,
-      visible: false,
+      visible: false
     });
   }
   isModalOpen(id: string) {

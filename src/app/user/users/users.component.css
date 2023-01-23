@@ -4,6 +4,11 @@
   margin: 24px 0 12px 0;
   position: relative;
 }
+.test2 {
+  background-color: #36f46f;
+  cursor: pointer;
+  margin: auto;
+}
 
 img.avatar {
   width: 40%;

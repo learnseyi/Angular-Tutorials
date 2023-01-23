@@ -1,4 +1,4 @@
-<div [ngClass]="className">
-  <span class="closebtn">&times;</span>
-  {{message}}
+<div [attr.class]="className" *ngIf="display">
+  <span class="closebtn" (click)="closeBtn()">&times;</span>
+  {{ message }}
 </div>

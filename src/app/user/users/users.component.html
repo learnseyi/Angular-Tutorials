@@ -1,9 +1,10 @@
 <form [formGroup]="registerForm">
   <app-alert
-    *ngIf="display"
     message="{{ message }}"
-    [ngClass]="className"
+    [attr.class]="className"
+    [display]="display "
   ></app-alert>
+
   <div class="imgcontainer" title>
     <h2>Login Form</h2>
   </div>
@@ -17,7 +18,7 @@
     <label for="psw"><b>Password: </b></label>
     <app-input [control]="password"></app-input>
 
-    <button class="loginbtn" type="submit">Login</button><br />
+    <button class="loginbtn" (click)="logIn()">Login</button><br />
     <label>
       <input type="checkbox" checked="checked" name="remember" /> Remember me
     </label>
