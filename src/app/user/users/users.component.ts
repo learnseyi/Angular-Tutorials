@@ -16,13 +16,13 @@ export class UsersComponent {
     Validators.required,
     Validators.minLength(3),
   ]);
-  registerForm = new FormGroup({
+  loginForm = new FormGroup({
     name: this.name,
     password: this.password,
   });
 
   constructor(private modal: ModalService) {
-    console.log(this.registerForm.controls.name);
+    console.log(this.loginForm.controls.name);
   }
 
   async logIn() {

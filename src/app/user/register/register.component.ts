@@ -18,6 +18,7 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit() {}
 
+  
   async register(e) {
     e.preventDefault();
     this.displayAlert = !this.displayAlert;
@@ -25,5 +26,6 @@ export class RegisterComponent implements OnInit {
     const logInBtn = document.querySelector('.loginbtn');
     await setTimeout(() => (this.alertMessage = 'successful'), 2000);
     await setTimeout(() => (this.displayAlert = false), 4000);
+    console.log(this.firstName.errors)
   }
 }

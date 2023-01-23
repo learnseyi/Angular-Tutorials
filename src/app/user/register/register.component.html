@@ -1,4 +1,4 @@
-<form>
+<form [formGroup]="registerForm">
   <app-alert
     message="{{ alertMessage }}"
     [attr.class]="alertClassName"
@@ -11,7 +11,8 @@
   <div class="formcontainer">
     <div class="container">
       <label for="fname"><strong>First Name</strong></label>
-      <input type="text" placeholder="Enter First name" name="fname" />
+      <input type="text" placeholder="Enter First name" name="fname" [formControl]="firstName"/>
+      <p *ngIf="firstName.errors">this field is required</p>
       <label for="lname"><strong>Last Name</strong></label>
       <input type="text" placeholder="Enter Last Name" name="lname" />
       <label for="uname"><strong>Username</strong></label>
