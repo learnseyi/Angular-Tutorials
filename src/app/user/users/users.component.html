@@ -1,5 +1,9 @@
 <form [formGroup]="registerForm">
-  <app-alert></app-alert>
+  <app-alert
+    *ngIf="display"
+    message="{{ message }}"
+    [ngClass]="className"
+  ></app-alert>
   <div class="imgcontainer" title>
     <h2>Login Form</h2>
   </div>

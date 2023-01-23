@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -7,6 +7,9 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./users.component.css'],
 })
 export class UsersComponent {
+  display = true;
+  message: string = 'I am test';
+  className: string = 'test';
   name = new FormControl('', [Validators.required, Validators.minLength(4)]);
   password = new FormControl('', [
     Validators.required,
