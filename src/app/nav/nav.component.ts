@@ -7,10 +7,13 @@ import { ModalService } from '../services/modal.service';
   styleUrls: ['./nav.component.css'],
 })
 export class NavComponent implements OnInit {
+  isLoggedIn = false;
 
   constructor(public modal: ModalService) {}
 
-
+  userState() {
+    return !this.isLoggedIn ? 'Login' : 'Sign Out';
+  }
 
   ngOnInit() {}
 }

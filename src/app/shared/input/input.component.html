@@ -4,10 +4,14 @@
   [placeholder]="placeholder"
   [formControl]="control"
 /><br />
-<ng-container *ngIf="control.touched && control.dirty">
+<ng-container *ngIf="control.touched || control.dirty">
   <p class="error" *ngIf="control.errors?.required">This field is required</p>
   <p class="error" *ngIf="control.errors?.minlength">
     Minimum allowed characters is {{ control.errors?.minlength.requiredLength }}
+  </p>
+  <p class="error" *ngIf="!control.errors?.valid">
+    <li>must have capital letter</li>
+    <li>have special character</li>
   </p>
   <br />
 </ng-container>

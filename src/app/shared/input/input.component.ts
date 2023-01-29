@@ -11,8 +11,10 @@ export class InputComponent implements OnInit {
   @Input() type = '';
   @Input() placeholder = '';
 
-  constructor() {
-   
+  constructor() {}
+
+  displayControls(x) {
+    console.log(x);
   }
 
   ngOnInit() {}
