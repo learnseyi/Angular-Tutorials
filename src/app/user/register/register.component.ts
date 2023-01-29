@@ -1,6 +1,6 @@
 import { Component, EventEmitter, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
-import { AngularFirestore } from '@angular/fire/compat/firestore';
+// import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 interface IuserData {
@@ -41,7 +41,7 @@ export class RegisterComponent implements OnInit {
     Validators.pattern('^(?=.*d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$'),
   ]);
 
-  constructor(private auth: AngularFireAuth, private db: AngularFirestore) {}
+  constructor(private auth: AngularFireAuth) {}
 
   registerForm = new FormGroup({
     firstName: this.firstName,
@@ -67,13 +67,13 @@ export class RegisterComponent implements OnInit {
         password as string
       );
       console.log(userCred);
-      this.db.collection('users').add({
-        firstName: this.firstName.value,
-        lastName: this.lastName.value,
-        email: this.email.value,
-      });
+      // this.db.collection('users').add({
+      //   firstName: this.firstName.value,
+      //   lastName: this.lastName.value,
+      //   email: this.email.value,
+      // });
     } catch (e) {
-      console.log(e.message);
+      this.alertMessage = e.message;
     }
     await setTimeout(() => (this.alertMessage = 'successful'), 2000);
     await setTimeout(() => (this.displayAlert = false), 4000);

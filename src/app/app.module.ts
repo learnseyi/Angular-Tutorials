@@ -5,7 +5,7 @@ import { AngularFireModule } from '@angular/fire/compat'; // required to integra
 // AngularFireAuthModule required to connect the firebase authentication service
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 // AngularFirestoreModule required to connect to the firestore service
-import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+// import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
@@ -19,7 +19,6 @@ import { environment } from '../../environment';
     UserModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
-    AngularFirestoreModule,
   ],
   declarations: [AppComponent, NavComponent],
   bootstrap: [AppComponent],
