@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-//import { AngularFireModule } from '@angular/fire/compat'; // required to integrate firebase
+import { AngularFireModule } from '@angular/fire/compat'; // required to integrate firebase
 // AngularFireAuthModule required to connect the firebase authentication service
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 // AngularFirestoreModule required to connect to the firestore service
@@ -17,8 +17,8 @@ import { environment } from '../../environment';
     BrowserModule,
     FormsModule,
     UserModule,
-   // AngularFireModule.initializeApp(environment.firebaseConfig),
-   // AngularFireAuthModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    // AngularFireAuthModule,
   ],
   declarations: [AppComponent, NavComponent],
   bootstrap: [AppComponent],
