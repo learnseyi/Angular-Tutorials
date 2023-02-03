@@ -16,7 +16,7 @@ export class ModalService {
   register(id: string) {
     this.modals.push({
       id,
-      visible: false
+      visible: false,
     });
   }
   isModalOpen(id: string) {
@@ -26,5 +26,6 @@ export class ModalService {
   toggleModal(id: string) {
     const modal = this.modals.find((element) => element.id === id);
     if (modal) return (modal.visible = !modal.visible);
+    
   }
 }
